@@ -2,4 +2,4 @@
 
 使用Qt designer製作
 
-![img]()
+![image](https://github.com/crocodilehs/stock-chart/blob/main/screenshot.png)
