@@ -30,6 +30,11 @@ class MainWindow_controller(QtWidgets.QMainWindow):
         RSI_check = self.ui.checkBox_RSI.isChecked()
         KD_check = self.ui.checkBox_KD.isChecked()
         BBAND_check = self.ui.checkBox_BBAND.isChecked()
+        ATR_check = self.ui.checkBox_ATR.isChecked()
+        ADX_check = self.ui.checkBox_ADX.isChecked()
+        Volume_check = self.ui.checkBox_volume.isChecked()
+        EMA_check = self.ui.checkBox_EMA.isChecked()
+
         start_date = self.ui.start_date.date().toPyDate()
         end_date = self.ui.end_date.date().toPyDate()
 
@@ -42,6 +47,7 @@ class MainWindow_controller(QtWidgets.QMainWindow):
         elif self.ui.radioBtn_candle:
             type = "candle"
 
-        main.plotStock(target, type, MACD_check, RSI_check ,KD_check, BBAND_check, start_date, end_date)
+        main.plotStock(target, type, MACD_check, RSI_check,KD_check, BBAND_check, EMA_check, ATR_check, ADX_check
+                       , Volume_check, start_date, end_date)
         pixmap = QPixmap(f"{target}.jpg")
         self.ui.label_img.setPixmap(pixmap)

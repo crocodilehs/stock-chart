@@ -33,3 +33,22 @@ def BBANDS(df):
   df.rename(columns={'close':'Close', 'high':'High', 'low':'Low'}, inplace = True)
   return df
 
+def ATR(df):
+  df.rename(columns={'Close':'close', 'High':'high', 'Low':'low'}, inplace=True)
+  df['ATR'] = abstract.ATR(df)
+  df.rename(columns={'close':'Close', 'high':'High', 'low':'Low'}, inplace=True)
+  return df
+
+def ADX(df):
+  df.rename(columns={'Close':'close', 'High':'high', 'Low':'low'}, inplace=True)
+  df['ADX'] = abstract.ADX(df)
+  df.rename(columns={'close':'Close', 'high':'High', 'low':'Low'}, inplace=True)
+  return df
+
+def EMA(df):
+  df.rename(columns={'Close':'close'}, inplace=True)
+  df['EMA5'] = abstract.EMA(df, timeperiod=5)
+  df['EMA10'] = abstract.EMA(df, timeperiod=10)
+  df['EMA20'] = abstract.EMA(df, timeperiod=20)
+  df.rename(columns={'close':'Close'}, inplace=True)
+  return df
