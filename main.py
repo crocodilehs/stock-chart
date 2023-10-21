@@ -1,9 +1,3 @@
-"""
-Todo
-ADX單獨畫或畫ADX和其他一個指標時會閃退
-"""
-
-
 import mplfinance as mpf
 import indicator
 import updateData
@@ -21,7 +15,6 @@ def plotStock(target_stock, type, MACD_check, RSI_check ,KD_check, BBAND_check, 
     mc = mpf.make_marketcolors(up='r', down='g', inherit=True)
     style = mpf.make_mpf_style(base_mpf_style='yahoo', marketcolors=mc, y_on_right=False, edgecolor="black")
     tdf = df.loc[start:end, :]
-
     """
     panel: 畫在第幾張畫布上
     label: 圖例
@@ -60,16 +53,16 @@ def plotStock(target_stock, type, MACD_check, RSI_check ,KD_check, BBAND_check, 
             mpf.make_addplot(tdf["RSI"], panel=panel, ylabel="RSI", color="purple", label=f"RSI {tdf['RSI'][-1]:.2f}"))
 
     if ATR_check:
-        panel +=1
+        panel += 1
         tdf = indicator.ATR(tdf)
         add_plots.append(
             mpf.make_addplot(tdf["ATR"], panel=panel, ylabel="ATR", color="green", label=f"ATR {tdf['ATR'][-1]:.2f}"))
 
     if ADX_check:
-        panel +=1
+        panel += 1
         tdf = indicator.ADX(tdf)
         add_plots.append(
-            mpf.make_addplot(tdf["ADX"], panel=panel, ylabel="ADX", color="orange", label=f"ADX {tdf['RSI'][-1]:.2f}"))
+            mpf.make_addplot(tdf["ADX"], panel=panel, ylabel="ADX", color="orange", label=f"ADX {tdf['ADX'][-1]:.2f}"))
 
     if EMA_check:
         tdf = indicator.EMA(tdf)

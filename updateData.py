@@ -22,11 +22,10 @@ def stockData(stock_id: str, start):
     address = stock_id + ".csv"
     if os.path.isfile(address):
         df_new = pd.read_csv(address, index_col="Date", parse_dates=["Date"])
-
         end = datetime.datetime.strptime(str(today), '%Y-%m-%d')
         # 下載缺少的資料
         df = yf.download(stock_id, start=df_new.index[-1], end=tomarrow)
-        if end not in df_new.index:
+        if end not in df_new.index and (end.weekday() != 5 and end.weekday() != 6):
             # 合併新資料到舊資料然後存檔
             df_new = pd.concat([df_new, df])
             df_new.to_csv(address, encoding='utf-8')
