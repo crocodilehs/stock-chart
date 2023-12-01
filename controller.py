@@ -1,13 +1,13 @@
 from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtGui import QPixmap
 import main
-from UI import Ui_MainWindow
+from UI import Ui_StockChart
 
 
 class MainWindow_controller(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()  # in python3, super(Class, self).xxx = super().xxx
-        self.ui = Ui_MainWindow()
+        self.ui = Ui_StockChart()
         self.ui.setupUi(self)
         self.setup_control()
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>StockChart</class>
+ <widget class="QMainWindow" name="StockChart">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -626,8 +626,8 @@
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="ma_or_bol"/>
-  <buttongroup name="candle_or_line"/>
   <buttongroup name="T_or_A"/>
+  <buttongroup name="candle_or_line"/>
+  <buttongroup name="ma_or_bol"/>
  </buttongroups>
 </ui>
