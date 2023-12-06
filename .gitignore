@@ -1,5 +1,6 @@
 1.txt
 venv/
 .idea/
-.jpg
-.png
+*.jpg
+*.png
+*.csv
