@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>StockChart</string>
   </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
@@ -626,8 +626,8 @@
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="T_or_A"/>
-  <buttongroup name="candle_or_line"/>
   <buttongroup name="ma_or_bol"/>
+  <buttongroup name="candle_or_line"/>
+  <buttongroup name="T_or_A"/>
  </buttongroups>
 </ui>

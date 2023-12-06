@@ -325,7 +325,7 @@ class Ui_StockChart(object):
 
     def retranslateUi(self, StockChart):
         _translate = QtCore.QCoreApplication.translate
-        StockChart.setWindowTitle(_translate("StockChart", "MainWindow"))
+        StockChart.setWindowTitle(_translate("StockChart", "StockChart"))
         self.btn_confirm.setText(_translate("StockChart", "confirm"))
         self.radioBtn_tai.setText(_translate("StockChart", "台股"))
         self.radioBtn_usa.setText(_translate("StockChart", "美股"))
